@@ -17,8 +17,9 @@ do
     fi
 done
 
-TREE1=tmp_${1}_tree
+TREE1=tmp_dirtree_1
 tree $1 > $TREE1     
-TREE2=tmp_${2}_tree
+TREE2=tmp_dirtree_2
 tree $2 > $TREE2     
 vimdiff $TREE1 $TREE2
+rm $TREE1 $TREE2
